@@ -59,3 +59,10 @@ factors <- function(num) {
   factors <- unique(factors)
   factors
 }
+
+palin_num <- function(num) {
+  vals <- strsplit(as.character(num), "")
+  revchars <- rev(unlist(vals))
+  revstr <- paste(revchars, collapse = "")
+  num == as.numeric(revstr)
+}
